@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 13:53:13 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 16:05:18 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 16:08:21 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static vector<string>	split_coords(string data) {
 	char			in = 0;
 
 	for (size_t i = 0; i < data.size(); i++) {
-		if (data[i] == '(') {
+		if (data[i] == '(' && i + 1 != data.size()) {
 			if (in)
 				return err;
 			in = 1;
@@ -73,6 +73,8 @@ static char		add_map(char *path, vector<string> split, vector<map> *maps) {
 		coords.z = tmp;
 		nmap.points.push_back(coords);
 	}
+	if (count < 2)
+		return 0;
 	nmap.path = path;
 	maps->push_back(nmap);	
 	return 1;
