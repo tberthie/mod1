@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 12:07:47 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 15:59:45 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 16:15:39 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 # include <vector>
 # include <string>
 
-# define WIN_SIZE	500
+# define WINX	750
+# define WINY	750
 
 using namespace std;
 
@@ -38,13 +39,16 @@ class	map {
 	public:
 		char			*path;
 		vector<vec3>	points;
-
-		SDL_Window		*win;
-		SDL_Renderer	*ren;
-
 };	
 
+class	visu {
+
+	public:
+		SDL_Window		*win;
+		SDL_Renderer	*ren;
+};
+
 char	parse_args(int ac, char *av[], vector<map> *maps);
-void	render(vector<map> *maps);
+void	render(visu *visual, vector<map> *maps);
 
 #endif
