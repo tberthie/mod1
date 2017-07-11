@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 12:07:47 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 16:16:46 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 16:21:47 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class	vec3 {
 	public:
 		int	x;
 		int	y;
-		int	z;
+		int	h;
 };
 
 class	map {

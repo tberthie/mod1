@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 13:53:13 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 16:17:05 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 16:21:57 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static char		add_map(char *path, vector<string> split, vector<map> *maps) {
 			} else
 				return 0;
 		}
-		coords.z = tmp;
+		coords.h = tmp;
 		nmap.points.push_back(coords);
 	}
 	if (count < 2)
