@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 13:53:13 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 14:49:38 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 15:26:47 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static vector<string>	split_coords(string data) {
 	return split;
 }
 
-static char		add_map(vector<string> split, vector<map> *maps) {
+static char		add_map(char *path, vector<string> split, vector<map> *maps) {
 
 	map		nmap;
 	vec3	coords;
@@ -73,6 +73,7 @@ static char		add_map(vector<string> split, vector<map> *maps) {
 		coords.z = tmp;
 		nmap.points.push_back(coords);
 	}
+	nmap.path = path;
 	maps->push_back(nmap);	
 	return 1;
 }
@@ -94,7 +95,7 @@ char			parse_args(int ac, char *av[], vector<map> *maps) {
 				data += buf;
 			data = remove_spaces(data);
 			if (!(split = split_coords(data)).size() ||
-			!add_map(split, maps)) {
+			!add_map(av[i], split, maps)) {
 				cerr << "mod1: " << av[i] << ": Invalid map file" << endl;
 				return 0;
 			}
