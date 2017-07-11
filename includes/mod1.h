@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 12:07:47 by tberthie          #+#    #+#             */
-/*   Updated: 2017/07/11 15:36:10 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/07/11 15:59:45 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@
 # include <vector>
 # include <string>
 
-# define WINX	500
-# define WINY	500
+# define WIN_SIZE	500
 
 using namespace std;
 
